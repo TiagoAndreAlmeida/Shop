@@ -58,17 +58,3 @@ exports.getTotalMonthSeller = (req, res, next) => {
         }
     });
 };
-
-exports.newClient = (req, res, next) => {
-    client.query('INSERT INTO cliente(nome) VALUES($1)',[req.body.nome], (err, result) => {
-        if(err){
-            res.status(400).send({
-                message: err.stack
-            });
-        }else{
-            res.status(200).send({
-                message: req.body.nome+' cadastrado!'
-            });
-        }
-    });
-};

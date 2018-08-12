@@ -14,7 +14,4 @@ router.get('/maiscompradoporproduto/:id', controller.getClientByProduct);
 //retorna o total de vendas no mês
 router.get('/totalvendames',controller.getTotalMonthSeller);
 
-//cadastra um novo cliente
-router.post('/cadastrarcliente', controller.newClient);
-
 module.exports = router;
